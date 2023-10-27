@@ -18,9 +18,8 @@ export default function App() {
         <Drawer.Screen name="Gender" component={Gender} />
         <Drawer.Screen name="Age" component={Age} />
         <Drawer.Screen name="Country" component={Country} />
-        {/* <Drawer.Screen name="Weather" component={Weather} />
-        <Drawer.Screen name="WordPress" component={WordPress} />
-        <Drawer.Screen name="AboutMe" component={AboutMe} /> */}
+        <Drawer.Screen name="Weather" component={Weather} />
+        <Drawer.Screen name="AboutMe" component={AboutMe} />
       </Drawer.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
