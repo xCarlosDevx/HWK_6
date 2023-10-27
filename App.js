@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React from "react";
+import Home from "./src/pages/Home";
+import Gender from "./src/pages/Gender";
+import Age from "./src/pages/Age";
+import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import Country from "./src/pages/Country";
+import Weather from "./src/pages/Weather";
+import WordPress from "./src/pages/WordPress";
+import AboutMe from "./src/pages/AboutMe";
+const Drawer = createDrawerNavigator();
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Gender" component={Gender} />
+        <Drawer.Screen name="Age" component={Age} />
+        <Drawer.Screen name="Country" component={Country} />
+        {/* <Drawer.Screen name="Weather" component={Weather} />
+        <Drawer.Screen name="WordPress" component={WordPress} />
+        <Drawer.Screen name="AboutMe" component={AboutMe} /> */}
+      </Drawer.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
