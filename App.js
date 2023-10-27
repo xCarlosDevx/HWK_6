@@ -7,7 +7,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Country from "./src/pages/Country";
 import Weather from "./src/pages/Weather";
-import WordPress from "./src/pages/WordPress";
 import AboutMe from "./src/pages/AboutMe";
 const Drawer = createDrawerNavigator();
 export default function App() {
